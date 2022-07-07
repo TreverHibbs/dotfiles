@@ -1,2 +1,2 @@
 # dotfiles
-my new dotfiles
+my new dotfiles using chezmoi
