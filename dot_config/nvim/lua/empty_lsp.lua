@@ -1,5 +1,5 @@
 require('nvim-lsp-setup').setup({
-    servers = {
-	sumneko_lua = {}
-    }
+	servers = {
+		sumneko_lua = {}
+	}
 })

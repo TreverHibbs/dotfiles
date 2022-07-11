@@ -11,13 +11,17 @@ vim.cmd([[
 ]])
 
 return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use {
-    'junnplus/nvim-lsp-setup',
-    requires = {
-        'neovim/nvim-lspconfig',
-        'williamboman/nvim-lsp-installer',
-    }
-  }
+	-- Packer can manage itself
+	use 'wbthomason/packer.nvim'
+	use {
+		'junnplus/nvim-lsp-setup',
+		requires = {
+			'neovim/nvim-lspconfig',
+			'williamboman/nvim-lsp-installer',
+		}
+	}
+	use { 'ibhagwan/fzf-lua',
+		-- optional for icon support
+		requires = { 'kyazdani42/nvim-web-devicons' }
+	}
 end)
