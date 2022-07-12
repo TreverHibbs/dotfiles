@@ -1,5 +1,3 @@
-vim.cmd('colorscheme my_theme')
-
 -- use numbered lines
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -18,3 +16,13 @@ vim.opt.tabstop = 8
 vim.opt.shiftwidth = 4
 
 vim.opt.termguicolors = true
+
+-- remove tildas
+vim.cmd('set fillchars-=vert:\\|')
+
+-- remove virticle split
+vim.cmd('set fillchars-=vert:\\|')
+
+-- vim.cmd('set guifont=Consolas')
+
+vim.cmd('colorscheme monokai_pro')

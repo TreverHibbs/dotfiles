@@ -35,4 +35,5 @@ return require('packer').startup(function()
         end
     }
     use "EdenEast/nightfox.nvim"
+    use 'tanvirtin/monokai.nvim'
 end)

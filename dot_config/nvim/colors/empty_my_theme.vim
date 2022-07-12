@@ -17,4 +17,8 @@ let g:colors_name="my_theme"
 hi Pmenu	guifg=White guibg=Grey
 hi Whitespace	guifg=White guibg=Grey
 
+" make verticle split invisble
+hi VertSplit gui=reverse guifg=Blue ctermbg=0 ctermfg=0
+
+
 "vim: sw=4
