@@ -11,27 +11,28 @@ vim.cmd([[
 ]])
 
 return require('packer').startup(function()
-	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
-	use {
-		'junnplus/nvim-lsp-setup',
-		requires = {
-			'neovim/nvim-lspconfig',
-			'williamboman/nvim-lsp-installer',
-		}
-	}
-	use { 'ibhagwan/fzf-lua',
-		-- optional for icon support
-		requires = { 'kyazdani42/nvim-web-devicons' }
-	}
-	use {
-		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup {
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			}
-		end
-	}
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+    use {
+        'junnplus/nvim-lsp-setup',
+        requires = {
+            'neovim/nvim-lspconfig',
+            'williamboman/nvim-lsp-installer',
+        }
+    }
+    use { 'ibhagwan/fzf-lua',
+        -- optional for icon support
+        requires = { 'kyazdani42/nvim-web-devicons' }
+    }
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
+    use "EdenEast/nightfox.nvim"
 end)

@@ -1,3 +1,5 @@
+vim.cmd('colorscheme my_theme')
+
 -- use numbered lines
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -14,3 +16,5 @@ vim.opt.smarttab = true
 vim.opt.softtabstop = 0
 vim.opt.tabstop = 8
 vim.opt.shiftwidth = 4
+
+vim.opt.termguicolors = true
