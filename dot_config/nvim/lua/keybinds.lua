@@ -8,9 +8,16 @@ local wk = require("which-key")
 --  * <leader>fe edit file
 -- and hide <leader>1
 
+-- The function is called `t` for `termcodes`.
+-- You don't have to call it that, but I find the terseness convenient
+
+-- The function is called `t` for `termcodes`.
+-- You don't have to call it that, but I find the terseness convenient
+vim.g.mapleader = ' '
+
 wk.register({
-	f = {
-		name = "file", -- optional group name
-		o = { "<cmd>FzfLua files<cr>", "Find File" }, -- create a binding with label
-	},
+    f = {
+        name = "file", -- optional group name
+        o = { "<cmd>FzfLua files<cr>", "Find File" }, -- create a binding with label
+    },
 }, { prefix = "<leader>" })

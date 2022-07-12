@@ -17,4 +17,9 @@ use the neovim plugin which key
 :WhichKey <leader> " show all <leader> mappings
 :WhichKey <leader> v " show all <leader> mappings for VISUAL mode
 :WhichKey '' v " show ALL mappings for VISUAL mode
+:WhichKey <leader>f show all mappings for leader followed by f
 ```
+
+## Neovim Help
+
+FzfLua <tab> provides a list of helpfull fzf functions e.g. `FzfLua help_tags`.

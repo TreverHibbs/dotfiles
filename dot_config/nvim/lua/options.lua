@@ -6,4 +6,11 @@ vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
 
 -- enable mouse
-vim.opt.mouse = "a"
+vim.opt.mouse = 'a'
+
+-- use spaces for tab
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.softtabstop = 0
+vim.opt.tabstop = 8
+vim.opt.shiftwidth = 4
