@@ -23,3 +23,7 @@ use the neovim plugin which key
 ## Neovim Help
 
 FzfLua <tab> provides a list of helpfull fzf functions e.g. `FzfLua help_tags`.
+
+## LSP
+To add new lsp server use `:LspInstall`
+After adding an lsp server go to `$HOME/.config/nvim/lsp/lua/lsp.lua` and add the lanuage server setup.
