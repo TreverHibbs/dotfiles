@@ -18,6 +18,6 @@ vim.g.mapleader = ' '
 wk.register({
     f = {
         name = "file", -- optional group name
-        o = { "<cmd>FzfLua files<cr>", "Find File" }, -- create a binding with label
+        o = { "<cmd>lua require'fzf-lua'.files({ cmd = 'fd --type f --exclude node_modules' })<cr>", "Find File" }, -- create a binding with label
     },
 }, { prefix = "<leader>" })
