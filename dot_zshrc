@@ -123,3 +123,23 @@ fpath=($fpath "/home/thibbs/.zfunctions")
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+
+# windows terminal session functions
+export TW_SESSIONS="$HOME/.config/windows-term-sessions"
+# Kitty functions
+function wts() {
+    bash $KITTY_SESSIONS/$1 &!
+}
+
+_fzf_complete_wts() {
+  _fzf_complete --reverse --prompt="session> " -- "$@" < <(
+    ls $TW_SESSIONS
+  )
+}
+
+function kts-new() {
+    cp $KITTY_SESSIONS/default.conf $KITTY_SESSIONS/$1.conf
+    vim $KITTY_SESSIONS/$1.conf
+}
+
+alias kts-edit="nvim \$KITTY_SESSIONS/\$(ls \$KITTY_SESSIONS | fzf --reverse)"
