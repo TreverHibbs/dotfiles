@@ -28,6 +28,8 @@ FzfLua <tab> provides a list of helpfull fzf functions e.g. `FzfLua help_tags`.
 To add new lsp server use `:LspInstall`
 After adding an lsp server go to `$HOME/.config/nvim/lsp/lua/lsp.lua` and add the lanuage server setup.
 
+valid lsp server names can be found here https://github.com/williamboman/nvim-lsp-installer#available-lsps
+
 
 ## Windows Terminal Session Management
 function is .zshrc file
