@@ -107,7 +107,7 @@ export EDITOR=/usr/bin/nvim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Path
-export PATH="$HOME/bin:$PATH"
+# export PATH
 
 # enable vim mode
 bindkey -v
