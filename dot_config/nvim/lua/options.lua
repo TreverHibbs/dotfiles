@@ -26,3 +26,6 @@ vim.cmd('set fillchars-=vert:\\|')
 -- vim.cmd('set guifont=Consolas')
 
 vim.cmd('colorscheme monokai_pro')
+
+-- coq completion settings
+vim.cmd('let g:coq_settings = { \'auto_start\': \'shut-up\' }')
