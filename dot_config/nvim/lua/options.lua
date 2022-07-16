@@ -23,6 +23,8 @@ vim.cmd('set fillchars-=vert:\\|')
 -- remove virticle split
 vim.cmd('set fillchars-=vert:\\|')
 
+vim.cmd('set nowrap')
+
 -- vim.cmd('set guifont=Consolas')
 
 vim.cmd('colorscheme monokai_pro')
