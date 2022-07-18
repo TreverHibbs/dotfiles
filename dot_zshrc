@@ -146,3 +146,6 @@ _fzf_complete_wts-edit() {
     ls $WT_SESSIONS
   )
 }
+
+# vi mode lag fix
+KEYTIMEOUT=1
