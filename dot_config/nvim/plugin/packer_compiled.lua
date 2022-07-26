@@ -84,6 +84,16 @@ _G.packer_plugins = {
     path = "/home/thibbs/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/thibbs/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/thibbs/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["monokai.nvim"] = {
     loaded = true,
     path = "/home/thibbs/.local/share/nvim/site/pack/packer/start/monokai.nvim",
@@ -93,16 +103,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thibbs/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
     url = "https://github.com/EdenEast/nightfox.nvim"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/thibbs/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
-  },
-  ["nvim-lsp-setup"] = {
-    loaded = true,
-    path = "/home/thibbs/.local/share/nvim/site/pack/packer/start/nvim-lsp-setup",
-    url = "https://github.com/junnplus/nvim-lsp-setup"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
