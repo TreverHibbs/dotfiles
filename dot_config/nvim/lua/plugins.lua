@@ -34,4 +34,14 @@ return require('packer').startup(function()
     use 'tanvirtin/monokai.nvim'
     use { 'ms-jpq/coq_nvim', branch = 'coq' }
     use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+    use({
+        "jose-elias-alvarez/null-ls.nvim",
+        config = function()
+            require("null-ls").setup({ sources = {
+                require("null-ls").builtins.formatting.prettier,
+            },
+            })
+        end,
+        requires = { "nvim-lua/plenary.nvim" },
+    })
 end)
