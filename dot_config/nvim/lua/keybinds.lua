@@ -14,22 +14,18 @@ local wk = require("which-key")
 -- The function is called `t` for `termcodes`.
 -- You don't have to call it that, but I find the terseness convenient
 vim.g.mapleader = ' '
+local bufopts_common = { noremap = true, silent = true }
 
 Keybinds = {}
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-Keybinds.on_attach = function(client, bufnr)
+Keybinds.common_on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-    local bufopts = { noremap = true, silent = true, buffer = bufnr }
+    local bufopts = { unpack(bufopts_common), buffer = bufnr }
     wk.register({
         ["<leader>"] = {
-            f = {
-                f = { function()
-                    vim.lsp.buf.formatting()
-                end, "Format" },
-            },
             w = {
                 r = { function()
                     vim.lsp.buf.remove_workspace_folder()
@@ -41,15 +37,15 @@ Keybinds.on_attach = function(client, bufnr)
                     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
                 end, "List Workspace Folders" },
             },
-            D = {function ()
-                         vim.lsp.buf.type_definition()
-                 end, "Type Definition"},
-            rn = {function ()
-                         vim.lsp.buf.rename()
-                 end, "Rename"},
-            ca = {function ()
-                         vim.lsp.buf.code_action()
-                 end, "Code Action"},
+            D = { function()
+                vim.lsp.buf.type_definition()
+            end, "Type Definition" },
+            rn = { function()
+                vim.lsp.buf.rename()
+            end, "Rename" },
+            ca = { function()
+                vim.lsp.buf.code_action()
+            end, "Code Action" },
         },
         ["g"] = {
             name = "Goto",
@@ -69,6 +65,19 @@ Keybinds.on_attach = function(client, bufnr)
         K = { function()
             vim.lsp.buf.hover()
         end, "Lsp Hover" },
+    }, bufopts)
+end
+
+Keybinds.format_on_attach = function(client, bufnr)
+    local bufopts = { unpack(bufopts_common), buffer = bufnr }
+    wk.register({
+        ["<leader>"] = {
+            f = {
+                f = { function()
+                    vim.lsp.buf.formatting()
+                end, "Format" },
+            },
+        }
     }, bufopts)
 end
 
