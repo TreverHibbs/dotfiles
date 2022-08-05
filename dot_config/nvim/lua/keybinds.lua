@@ -89,6 +89,7 @@ wk.register({
         },
         e = { function() vim.diagnostic.open_float() end, "Open Diagnostics Float Window" },
         q = { function() vim.diagnostic.setloclist() end, "Set Local List" },
+        s = { "<cmd>set invspell<cr>", "Spell" }, -- create a binding with label
     },
     ["["] = {
         d = { function() vim.diagnostic.goto_prev() end, "Previous Diagnostic" }
