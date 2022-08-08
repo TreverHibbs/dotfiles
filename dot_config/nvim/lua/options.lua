@@ -18,7 +18,9 @@ vim.opt.shiftwidth = 4
 vim.opt.termguicolors = true
 
 -- use folds
-vim.opt.foldmethod = 'indent'
+-- vim.opt.foldmethod = 'indent'
+vim.opt.foldmethod     = 'expr'
+vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
 
 -- remove tildas
 vim.cmd('set fillchars-=vert:\\|')
