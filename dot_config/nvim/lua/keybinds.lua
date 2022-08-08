@@ -90,6 +90,21 @@ wk.register({
         e = { function() vim.diagnostic.open_float() end, "Open Diagnostics Float Window" },
         q = { function() vim.diagnostic.setloclist() end, "Set Local List" },
         s = { "<cmd>set invspell<cr>", "Spell" }, -- create a binding with label
+        ["n"] = {
+            name = "+neogen",
+            m = { function()
+                require('neogen').generate({ type = 'func' })
+            end, "function" },
+            c = { function()
+                require('neogen').generate({ type = 'class' })
+            end, "class" },
+            t = { function()
+                require('neogen').generate({ type = 'type' })
+            end, "type" },
+            f = { function()
+                require('neogen').generate({ type = 'file' })
+            end, "file" },
+        },
     },
     ["["] = {
         d = { function() vim.diagnostic.goto_prev() end, "Previous Diagnostic" }
