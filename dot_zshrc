@@ -152,3 +152,5 @@ _fzf_complete_wts-edit() {
 
 # vi mode lag fix
 KEYTIMEOUT=1
+
+export PATH=$PATH:~/.luarocks/bin

@@ -22,6 +22,8 @@ vim.opt.termguicolors = true
 vim.opt.foldmethod     = 'expr'
 vim.opt.foldexpr       = 'nvim_treesitter#foldexpr()'
 
+vim.g.do_filetype_lua = 1
+
 -- remove tildas
 vim.cmd('set fillchars-=vert:\\|')
 
