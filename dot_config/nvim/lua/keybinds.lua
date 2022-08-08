@@ -90,6 +90,8 @@ wk.register({
         e = { function() vim.diagnostic.open_float() end, "Open Diagnostics Float Window" },
         q = { function() vim.diagnostic.setloclist() end, "Set Local List" },
         s = { "<cmd>set invspell<cr>", "Spell" }, -- create a binding with label
+        p = {"<cmd>FzfLua commands<cr>", "Command Pallet"},
+        h = {"<cmd>FzfLua help_tags<cr>", "Help Tags"},
         ["n"] = {
             name = "+neogen",
             m = { function()
