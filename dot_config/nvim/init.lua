@@ -1,3 +1,6 @@
+--- The entry point
+-- @module Init
+
 require 'options'
 require 'plugins'
 require 'fzf'

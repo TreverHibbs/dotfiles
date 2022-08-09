@@ -1,8 +1,10 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+--- 
+--  Packer startup and plugin configuration.
+--
+-- @script Plugins
+-- @author RampantPorcupine_
 
--- Only required if you have packer configured as `opt`
--- vim.cmd [[packadd packer.nvim]]
-
+-- start packer
 vim.cmd([[
   augroup packer_user_config
     autocmd!
