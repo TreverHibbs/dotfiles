@@ -1,7 +1,5 @@
---- 
---  Packer startup and plugin configuration.
---
--- @script Plugins
+--- Packer startup and plugin configuration.
+-- @module Plugins
 -- @author RampantPorcupine_
 
 -- start packer
@@ -72,7 +70,15 @@ return require('packer').startup(function()
     use {
         "danymat/neogen",
         config = function()
-            require('neogen').setup {}
+            require('neogen').setup {
+                languages = {
+                    lua = {
+                        template = {
+                            annotation_convention = "ldoc" -- for a full list of annotation_conventions, see supported-languages below,
+                        }
+                    },
+                }
+            }
         end,
         requires = "nvim-treesitter/nvim-treesitter",
         -- Uncomment next line if you want to follow only stable versions

@@ -1,4 +1,10 @@
+--- Defines all keybindins with which key plugin. 
+--
+-- @module Keybindings
+-- @author RampantPorcupine_
+
 local wk = require("which-key")
+local neogen = require('neogen')
 -- As an example, we will create the following mappings:
 --  * <leader>ff find files
 --  * <leader>fr show recent files
@@ -95,17 +101,23 @@ wk.register({
         ["n"] = {
             name = "+neogen",
             m = { function()
-                require('neogen').generate({ type = 'func' })
+                neogen.generate({ type = 'func' })
             end, "function" },
             c = { function()
-                require('neogen').generate({ type = 'class' })
+                neogen.generate({ type = 'class' })
             end, "class" },
             t = { function()
-                require('neogen').generate({ type = 'type' })
+                neogen.generate({ type = 'type' })
             end, "type" },
             f = { function()
-                require('neogen').generate({ type = 'file' })
+                neogen.generate({ type = 'file' })
             end, "file" },
+            l = { function()
+                neogen.jump_next()
+            end, "jump next" },
+            h = { function()
+                neogen.jump_prev()
+            end, "jump prev" },
         },
     },
     ["["] = {
