@@ -1,4 +1,4 @@
---- Defines all keybindins with which key plugin. 
+--- Defines all keybindins with which key plugin.
 --
 -- @module Keybindings
 -- @author RampantPorcupine_
@@ -19,8 +19,10 @@ local neogen = require('neogen')
 
 -- The function is called `t` for `termcodes`.
 -- You don't have to call it that, but I find the terseness convenient
+
 vim.g.mapleader = ' '
 local bufopts_common = { noremap = true, silent = true }
+local bufopts_visual = { unpack(bufopts_common), mode = "v" }
 
 Keybinds = {}
 -- Use an on_attach function to only map the following keys
@@ -96,8 +98,8 @@ wk.register({
         e = { function() vim.diagnostic.open_float() end, "Open Diagnostics Float Window" },
         q = { function() vim.diagnostic.setloclist() end, "Set Local List" },
         s = { "<cmd>set invspell<cr>", "Spell" }, -- create a binding with label
-        p = {"<cmd>FzfLua commands<cr>", "Command Pallet"},
-        h = {"<cmd>FzfLua help_tags<cr>", "Help Tags"},
+        p = { "<cmd>FzfLua commands<cr>", "Command Pallet" },
+        h = { "<cmd>FzfLua help_tags<cr>", "Help Tags" },
         ["n"] = {
             name = "+neogen",
             m = { function()
@@ -128,4 +130,13 @@ wk.register({
             vim.diagnostic.goto_next()
         end, "Next Diagnostic" }
     },
-})
+    ["g"] = {
+        q = { "format lines" },
+    },
+}, bufopts_common)
+
+wk.register({
+    ["g"] = {
+        q = { "format lines" },
+    },
+}, bufopts_visual)
